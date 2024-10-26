@@ -71,3 +71,39 @@ def ej9(n):
         for j in range(0,i):
             print(i,end=" ")
 #Ejercicio 10 Rombo
+def ej10(n: int):
+    if n%2!=0:
+        espacios=(n-1)/2
+        asteriscos=1
+        filas=(n+1)/2
+        filas=int(filas); espacios=int(espacios)
+    else:
+        espacios=n/2
+        asteriscos=2
+        filas=n/2
+        filas=int(filas); espacios=int(espacios)
+
+    for i in range(0,filas):
+        print("\t\t",end="")
+        for j in range(0,espacios):
+            print(" ",end="")
+        for j in range(0,asteriscos):
+            print("*",end="")
+        print("")
+        asteriscos=asteriscos+2
+        espacios=espacios-1
+
+    asteriscos=asteriscos-4
+    espacios=espacios+2
+
+    for i in range(1,filas):
+        print("\t\t", end="")
+        for j in range(0, espacios):
+            print(" ", end="")
+        for j in range(0, asteriscos):
+            print("*", end="")
+        print("")
+        asteriscos = asteriscos - 2
+        espacios = espacios + 1
+
+ej10(9)
