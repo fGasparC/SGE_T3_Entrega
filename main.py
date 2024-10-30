@@ -53,11 +53,17 @@ def ej6(a,b,n):
 #Ejercicio 7. Crea una función que dada la longitud de los tres lados de un triángulo
 #determine si el triangulo es rectángulo 😱😱
 def ej7(a,b,c):
-    if(a*a)+(b*b)==(c*c):
+    maximo = max(a, b, c)
+    if maximo == a:
+        lado1, lado2 = b, c
+    elif maximo == b:
+        lado1, lado2 = a, c
+    else:
+        lado1, lado2 = a, b
+    if(lado1*lado1)+(lado2*lado2)==(maximo*maximo):
         return True
     else:
         return False
-
 #Ejercicio 8. Crea una función que calcule el máximo común divisor de dos números
 #naturales 😱😱
 def ej8(a,b):
